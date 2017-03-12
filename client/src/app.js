@@ -4,9 +4,12 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'mobx-react';
 
+const data = require('./mock/data');
+
 
 import Index from "./routes/index";
 import Layout from "./components/layout";
+
 
 const app = document.getElementById('root');
 
@@ -19,7 +22,7 @@ const app = document.getElementById('root');
   //  </Provider>,
 
 ReactDOM.render(
-	<Provider>
+	<Provider store={data}>
 		<Layout>
 	  		<Index />
 	  	</Layout>
