@@ -1,0 +1,19 @@
+{
+	"title": "Quizboard Mockup",
+	"teams": [
+		{"name": "Team A", "score": 0},
+		{"name": "Team B", "score": 0}
+	],
+	"categories": [
+		{
+			"title": "", 
+			"tiles": [
+				{
+					"value": 100,
+					"question": "This is the question",
+					"answer": "This is the answer"
+				}
+			]
+		}
+	]
+}
