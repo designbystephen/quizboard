@@ -1,5 +1,5 @@
 import React from 'react'
-import { inject, observer } from 'mobx-react'
+import { inject, observer, computed } from 'mobx-react'
 
 import Tile from './tile';
 
@@ -10,7 +10,12 @@ import Tile from './tile';
  */
 @inject(['store'])
 export default class Category extends React.Component{
-  
+  /** @type {String} category title */
+  title =  this.props.title
+
+  /** @type {Array} collection of question tiles */
+  tiles = this.props.tiles
+
   /**
    * Render Category JSX markup
    * @return {Object} JSX Markup
@@ -18,8 +23,10 @@ export default class Category extends React.Component{
   render() {
 	return (
 		<div className="category">
-			<Tile value="Category One" classModifier="tile--header" />
-			<Tile value="100" />
+			<Tile value={this.title} classModifier="tile--header" />
+			{this.tiles.map(tile=>(
+				<Tile key={tile.id} value={tile.value} question={tile.question} answer={tile.answer} />
+			))}
 		</div>
 	);
   }
