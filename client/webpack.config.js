@@ -1,11 +1,12 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
+const pkg = require('./package');
 
 module.exports = {
 	context: path.join(__dirname, "src"),
 	devtool: debug ? "inline-sourcemap" : null,
-	entry: "./components/app.js",
+	entry: "./app.js",
 	module: {
 		loaders: [
 			{
@@ -19,7 +20,7 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, "src"),
-		filename: "main.min.js"
+		filename: `${pkg.name}.min.js`
 	},
 	plugins: debug ? [] : [
 		new webpack.optimize.DedupePlugin(),

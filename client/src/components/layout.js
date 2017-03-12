@@ -4,11 +4,13 @@ import React from 'react'
 export default class Layout extends React.Component{
   render() {
     return (
-    	<header></header>
-    	<main>
-    		{this.props.children}
-    	</main>
-    	<footer></footer>
+    	<div className="layout">
+	    	<header></header>
+	    	<main>
+	    		{this.props.children}
+	    	</main>
+	    	<footer></footer>
+    	</div>
     );
   }
 }
