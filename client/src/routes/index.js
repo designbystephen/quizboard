@@ -16,7 +16,7 @@ export default class Index extends React.Component{
    */
   render() {
     return (
-    	<div className="category-listing">
+    	<div className="category-list">
     		{this.categories.map((category, index) => (
     			<Category key={category.id} title={category.title} tiles={category.tiles} />
     		))}

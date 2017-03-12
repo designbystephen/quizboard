@@ -22,7 +22,7 @@ export default class Category extends React.Component{
    */
   render() {
 	return (
-		<div className="category">
+		<div className="category-list__group">
 			<Tile value={this.title} classModifier="tile--header" />
 			{this.tiles.map(tile=>(
 				<Tile key={tile.id} value={tile.value} question={tile.question} answer={tile.answer} />

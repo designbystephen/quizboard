@@ -1,0 +1,50 @@
+////
+/// @group components
+/// @see %category
+////
+
+/// Game tile containing value and state of a question in a category
+///
+///	
+/// @example html - Markup usage for basic tile
+/// 	<div class="tile">
+/// 		<div class="tile__value">
+/// 			1000
+/// 		</div>
+/// 	</div>
+/// 	
+/// @example html - Markup usage for tile header
+/// 	<div class="tile tile--header">
+/// 		<div class="tile__value">
+/// 			1000
+/// 		</div>
+/// 	</div>
+/// 	
+/// @example html - Markup usage for disabled tile
+/// 	<div class="tile tile--disabled">
+/// 		<div class="tile__value">
+/// 			1000
+/// 		</div>
+/// 	</div>
+/// 	
+/// @todo implement colors and variables sass import
+
+
+.tile{
+	// background-color: $tile-background-color;
+	// color: $tile;
+
+	&__value{
+		text-align: center;
+	}
+}
+
+.tile--header{
+	// color: $tile-header-color;
+	// font-size: $tile-header-font-size;
+}
+
+.tile--disabled{
+	// color $tile-disabled-color;
+	// background-color:  $tile-disabled-background-color;
+}

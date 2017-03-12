@@ -1,0 +1,37 @@
+////
+/// @group components
+////
+
+/// Flex container as a column of categorized "tiles"  
+///
+/// @example html - Markup usage
+/// 	<div class="category-list">
+/// 		<div class="category-list__group">
+/// 			<div class="tile tile--header">
+/// 				Category Name
+/// 			</div>
+/// 			<div class="tile">
+/// 				Tile
+/// 			</div>
+/// 			<div class="title">
+/// 				...
+/// 			</div>
+/// 		</div>
+/// 	</div>
+/// 
+
+.category-list{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+
+	&__group{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: flex-end; 
+	}
+}
