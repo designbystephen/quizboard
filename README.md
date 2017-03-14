@@ -1,12 +1,11 @@
-# QuizBoard
+## QuizBoard
 #### A Jeopardy like quiz game
 
-# Client
-* ` /client
+## Client
+
+* ` /client`
 * Powered by React and webpack
-* 
 
-# Server
-* ` /server
+## Server
+* ` /server`
 * RESTful API powered by Java Springboot
-

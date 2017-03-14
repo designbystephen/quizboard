@@ -1,0 +1,46 @@
+////
+/// @group components
+/// @see %category
+////
+
+/// Banner containing game data like title and scoreboard
+///
+/// <header className="banner">
+/// 	<div className="banner__primary">
+/// 		Quizboard Demo
+/// 	</div>
+/// 	<div className="banner__score banner__score--left">
+/// 		Team 1: 100
+/// 	</div>
+/// 	<div className="banner__score banner__score--right">
+/// 		Team 2: 500
+/// 	</div>
+/// </header>
+
+.banner{
+	text-align: center;
+	// backgorund-color: $banner-background-color
+
+	&__primary{
+		text-align: center;
+		// font-size: $banner-font-size
+	}
+
+	&__score{
+		// font-size: $banner-score-font-size
+	}
+
+	&__score--right{
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $banner-score-right-color;
+	}
+
+	&__score--left{
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $banner-score-left-color;
+	}
+}
