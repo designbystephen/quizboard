@@ -61,12 +61,12 @@ export default class Tile extends React.Component{
    * @return {Object} JSX markup
    */
   render() {
-	return (
-		<div className={'tile ' + this.getModifiers()}>
-			<div className="tile__value">
-				{this.props.value}
-			</div>
-		</div>
-	);
+  	return (
+  		<div className={'tile ' + this.getModifiers()}>
+  			<div className="tile__value">
+  				{this.props.value}
+  			</div>
+  		</div>
+  	);
   }
 }
