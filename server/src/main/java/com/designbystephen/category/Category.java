@@ -1,10 +1,16 @@
 package com.designbystephen.category;
 
-import com.designbystephen.board.Board;
 import com.designbystephen.core.BaseEntity;
+import com.designbystephen.game.Game;
+import com.designbystephen.tile.Tile;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
+
+import static javax.persistence.CascadeType.ALL;
 
 /**
  * Created by birdie on 3/14/2017.
@@ -13,10 +19,13 @@ import javax.persistence.ManyToOne;
 public class Category extends BaseEntity {
     private String title;
     @ManyToOne
-    private Board board;
+    private Game game;
+    @OneToMany(mappedBy = "category", cascade = ALL)
+    private List<Tile> tiles;
 
     protected Category() {
         super();
+        tiles = new ArrayList<>();
     }
 
     public Category(String title) {
@@ -24,12 +33,21 @@ public class Category extends BaseEntity {
         this.title = title;
     }
 
-    public Board getBoard() {
-        return board;
+    public List<Tile> getTiles() {
+        return tiles;
     }
 
-    public void setBoard(Board board) {
-        this.board = board;
+    public void addTile(Tile tile) {
+        tile.setCategory(this);
+        tiles.add(tile);
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     public String getTitle() {
